@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIJI Token - Independence for Nigeria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(90deg, 
+    #1B7339 30%, 
+    rgba(27, 115, 57, 0.6) 32%, 
+    rgba(255, 255, 255, 0.8) 34%, 
+    #ffffff 50%, 
+    rgba(255, 255, 255, 0.8) 66%, 
+    rgba(27, 115, 57, 0.6) 68%, 
+    #1B7339 70%);
+
+            /* background: linear-gradient(90deg, #1B7339 33%, #ffffff 33%, #ffffff 66%, #1B7339 66%); */
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        h1 {
+            color: #008000;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            font-size: larger;
+            line-height: 1.25;
+            letter-spacing: .5;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            list-style-type: none;
+            display: flex;
+            gap: 1.75rem;
+            flex-direction: column;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1B7339;
+            padding: .5rem .75rem;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0px 0px 4px 2px #1B7339;
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./naiji.png" alt="NAIJI Logo">
+        </div>
+        <h1>NAIJI</h1>
+        <!-- <p>NAIJI aims to give Nigerians financial freedom and independence through decentralized, community-driven
+            cryptocurrency. Join us in this revolution!</p> -->
+
+        <div class="countdown" id="countdown"></div>
+
+        <ul class="links">
+            <li><a href="https://t.me/naiji2024" target="_blank"> Join Telegram</a></li>
+            <li><a href="" target="_blank"> Follow on Twitter</a></li>
+        </ul>
+
+    </div>
+
+    <script>
+        // Countdown Timer
+        const countdown = document.getElementById('countdown');
+        const targetDate = new Date('October 1, 2024 00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `Countdown: <br/> ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (timeLeft < 0) {
+                countdown.innerHTML = "The NAIJI revolution has begun!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
