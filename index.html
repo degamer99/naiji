@@ -20,13 +20,23 @@
             align-items: center;
             height: 100vh;
             background: linear-gradient(90deg, 
+    #1B7339 23%,      /* Green portion takes up 23% */
+    rgba(27, 115, 57, 0.6) 25%,  /* Smooth transition */
+    rgba(255, 255, 255, 0.8) 27%, /* Blurred white transition */
+    #ffffff 73%,       /* White portion takes up 50% */
+    rgba(255, 255, 255, 0.8) 75%, /* Blurred transition */
+    rgba(27, 115, 57, 0.6) 77%,   /* Smooth transition */
+    #1B7339 79%        /* Green portion at the end */
+);
+
+            /* background: linear-gradient(90deg, 
     #1B7339 30%, 
     rgba(27, 115, 57, 0.6) 32%, 
     rgba(255, 255, 255, 0.8) 34%, 
-    #ffffff 50%, 
+    #ffffff 60%, 
     rgba(255, 255, 255, 0.8) 66%, 
     rgba(27, 115, 57, 0.6) 68%, 
-    #1B7339 70%);
+    #1B7339 70%); */
 
             /* background: linear-gradient(90deg, #1B7339 33%, #ffffff 33%, #ffffff 66%, #1B7339 66%); */
             text-align: center;
